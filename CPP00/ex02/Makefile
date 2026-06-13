@@ -1,9 +1,8 @@
 
-
-NAME = megaphone
+NAME = Account
 CPP = clang++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = megaphone.cpp
+CPPFLAGS = -Wall -Wextra -Werror --std=c++98 -g
+SRCS = Account.cpp tests.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
