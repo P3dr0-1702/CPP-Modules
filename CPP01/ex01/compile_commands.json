@@ -1,0 +1,66 @@
+[
+  {
+    "arguments": [
+      "/home/pedro/.local/bin/clang++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "main.o",
+      "main.cpp"
+    ],
+    "directory": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00",
+    "file": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/main.cpp",
+    "output": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/main.o"
+  },
+  {
+    "arguments": [
+      "/home/pedro/.local/bin/clang++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "newZombie.o",
+      "newZombie.cpp"
+    ],
+    "directory": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00",
+    "file": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/newZombie.cpp",
+    "output": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/newZombie.o"
+  },
+  {
+    "arguments": [
+      "/home/pedro/.local/bin/clang++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "randomChump.o",
+      "randomChump.cpp"
+    ],
+    "directory": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00",
+    "file": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/randomChump.cpp",
+    "output": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/randomChump.o"
+  },
+  {
+    "arguments": [
+      "/home/pedro/.local/bin/clang++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-c",
+      "-o",
+      "Zombie.o",
+      "Zombie.cpp"
+    ],
+    "directory": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00",
+    "file": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/Zombie.cpp",
+    "output": "/var/home/pedro/Code/Work/CPP-Modules/CPP01/ex00/Zombie.o"
+  }
+]
