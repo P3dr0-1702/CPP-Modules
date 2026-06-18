@@ -10,20 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Zombie.hpp"
+#include <iostream>
 
-int	main()
+int	main(void)
 {
-	Zombie *zombie_heap;
-	Zombie zombie;
-	Zombie zombie_stack("stack");
+	Zombie	*zombie_heap;
+	Zombie	zombie;
+	delete	zombie_heap;
 
+	Zombie zombie_stack("stack");
 	zombie.announce();
 	zombie_heap = newZombie("heap");
 	zombie_stack.announce();
 	zombie_heap->announce();
 	randomChump("randO");
-	delete zombie_heap;
 }
-
