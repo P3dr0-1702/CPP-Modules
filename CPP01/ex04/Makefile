@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pfreire- <pfreire-@student.42lisboa.com>   +#+  +:+       +#+         #
+#    By: pedro </var/spool/mail/pedro>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/05/19 10:08:15 by pfreire-          #+#    #+#              #
-#    Updated: 2026/05/19 14:46:51 by pfreire-         ###   ########.fr        #
+#    Created: 2026/06/18 11:49:08 by pedro             #+#    #+#              #
+#    Updated: 2026/06/18 11:49:27 by pedro            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = UnnecessaryViolence
+NAME = sedIsForLosers
 
 CPP = clang++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
