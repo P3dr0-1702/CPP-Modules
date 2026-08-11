@@ -4,12 +4,12 @@
 Fixed::Fixed()
 {
 	this->fixed_point = 0;
-	std::cout << "DC called" << std::endl;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "DD called" << std::endl;
+	//Need i even do anything here?
+	//std::cout << "DD called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &copy)

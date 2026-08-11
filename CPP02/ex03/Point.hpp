@@ -18,8 +18,8 @@ class Point
 		~Point();
 
 		Point &operator=(const Point);
-		Fixed cx(void) const;
-		Fixed cy(void) const;
+		const Fixed &cx(void) const;
+		const Fixed &cy(void) const;
 
 };
 

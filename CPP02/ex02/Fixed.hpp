@@ -18,7 +18,7 @@ class Fixed
 
 		Fixed(const Fixed &copy);
 
-		Fixed operator=(const Fixed &src);
+		Fixed &operator=(const Fixed &src);
 		Fixed operator+(const Fixed &scr) const;
 		Fixed operator-(const Fixed &scr) const;
 		Fixed operator*(const Fixed &scr) const;

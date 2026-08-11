@@ -1,8 +1,13 @@
 #include "Point.hpp"
 
 Point::Point()
+	: x(0) , y(0)
 {
+}
 
+Point::Point(float x, float y)
+	: x(x), y(y)
+{
 }
 
 Point::~Point()
@@ -11,17 +16,17 @@ Point::~Point()
 }
 
 Point::Point(const Point &copy)
+	: x(copy.x), y(copy.y)
 {
-	this->cx() = copy.cx();
-	this->cy() = copy.cy();
 }
 
-Fixed Point::cx() const
+const Fixed &Point::cx() const
+
 {
 	return this->x;
 }
 
-Fixed Point::cy() const
+const Fixed &Point::cy() const
 {
 	return this->y;
 }

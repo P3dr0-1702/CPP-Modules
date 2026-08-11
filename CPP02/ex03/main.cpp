@@ -3,35 +3,28 @@
 
 int main()
 {
-	Point a;
-	Point b;
-	Point c;
-	Point check;
-	float i;
+	float x;
+	float y;
 	std::cout << "Point A?\nx?>";
-	std::cin >> i;
-	a.cx().setRawBits(i);
+	std::cin >> x;
 	std::cout << "Point A?\ny?>";
-	std::cin >> i;
-	a.cy().setRawBits(i);
+	std::cin >> y;
+	Point a(x, y);
 	std::cout << "Point B?\nx?>";
-	std::cin >> i;
-	b.cx().setRawBits(i);
+	std::cin >> x;
 	std::cout << "Point B?\ny?>";
-	std::cin >> i;
-	b.cy().setRawBits(i);
+	std::cin >> y;
+	Point b(x, y);
 	std::cout << "Point C?\nx?>";
-	std::cin >> i;
-	c.cx().setRawBits(i);
+	std::cin >> x;
 	std::cout << "Point C?\ny?>";
-	std::cin >> i;
-	c.cy().setRawBits(i);
+	std::cin >> y;
+	Point c(x, y);
 	std::cout << "Point Check?\nx?>";
-	std::cin >> i;
-	check.cx().setRawBits(i);
+	std::cin >> x;
 	std::cout << "Point Check?\ny?>";
-	std::cin >> i;
-	check.cy().setRawBits(i);
+	std::cin >> y;
+	Point check(x, y);
 	bool in = bsp(a,b,c,check);
 	if(in)
 		std::cout << "Inside\n";

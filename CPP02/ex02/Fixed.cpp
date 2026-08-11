@@ -7,12 +7,12 @@
 Fixed::Fixed()
 {
 	this->fixed_point = 0;
-	std::cout << "DC called" << std::endl;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "DD called" << std::endl;
+	//Need i even do anything here?
+	//std::cout << "DD called" << std::endl;
 }
 
 Fixed::Fixed(int const nbr)
@@ -28,7 +28,6 @@ Fixed::Fixed(float const nbr)
 Fixed::Fixed(const Fixed &copy)
 {
 	*this = copy;
-	std::cout << "CC called" << std::endl;
 }
 
 //Functions 
@@ -112,9 +111,8 @@ Fixed Fixed::operator*(const Fixed &src) const
 	return res;
 }
 
-Fixed Fixed::operator=(const Fixed &src)
+Fixed &Fixed::operator=(const Fixed &src)
 {
-	std::cout << "CA called" << std::endl;
 	if (this != &src)
 		this->fixed_point = src.getRawBits();
 	return (*this);
