@@ -17,7 +17,6 @@ int	main(void)
 {
 	Zombie	*zombie_heap;
 	Zombie	zombie;
-	delete	zombie_heap;
 
 	Zombie zombie_stack("stack");
 	zombie.announce();
@@ -25,4 +24,5 @@ int	main(void)
 	zombie_stack.announce();
 	zombie_heap->announce();
 	randomChump("randO");
+	delete	zombie_heap;
 }
