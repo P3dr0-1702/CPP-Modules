@@ -12,9 +12,10 @@ class ClapTrap
 		int dmg;
 	public:
 		ClapTrap();
-		ClapTrap(ClapTrap &copy);
+		ClapTrap(const ClapTrap &copy);
 		ClapTrap(std::string name);
 		~ClapTrap();
+		ClapTrap &operator=(const ClapTrap &src);
 		void attack(const std::string &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

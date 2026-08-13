@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "ClapTrap: " << this->name << " joined" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap &copy)
+ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
 	this->hp = 10;
@@ -30,6 +30,18 @@ ClapTrap::ClapTrap(ClapTrap &copy)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap: " << this->name << " left the game" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &src)
+{
+	if (this != &src)
+	{
+		this->dmg = src.dmg;
+		this->hp = src.hp;
+		this->sp = src.sp;
+		this->name = src.name;
+	}
+	return (*this);
 }
 
 void ClapTrap::attack(const std::string &target)
