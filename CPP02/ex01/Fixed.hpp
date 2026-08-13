@@ -1,5 +1,4 @@
 #include <iostream>
-#pragma once
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
@@ -16,7 +15,7 @@ class Fixed
 		Fixed(const Fixed &copy);
 		Fixed &operator=(const Fixed &src);
 		int getRawBits( void ) const;
-		void setRawBits( int const raw );;
+		void setRawBits( int const raw );
 		int toInt() const;
 		float toFloat() const;
 

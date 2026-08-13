@@ -39,7 +39,7 @@ int Fixed::toInt() const
 
 float Fixed::toFloat() const
 {
-	return (this->fixed_point / pow(2, this->fract_bits));
+	return ((float)this->fixed_point / (1 << this->fract_bits));
 }
 
 Fixed &Fixed::min(Fixed &a, Fixed &b)
