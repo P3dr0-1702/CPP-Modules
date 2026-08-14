@@ -1,5 +1,4 @@
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
@@ -8,6 +7,7 @@ int main()
 	ClapTrap Clappy_Trappy(Clappy);
 	ScavTrap Scavvy("Scavvy");
 	FragTrap Fraggy("Fraggy");
+	DiamondTrap Diammy("Diammy");
 	Clappy.attack("Trappy");
 	Trappy.takeDamage(10);
 	Clappy_Trappy.beRepaired(10);
@@ -29,6 +29,10 @@ int main()
 	Fraggy.attack("Trappy");
 	Fraggy.takeDamage(200);
 	Fraggy.attack("Clappy");
+	Diammy.attack("Bozo, The Clown");
+	Diammy.takeDamage(50);
+	Diammy.WhoAmI();
+	Diammy.guardGate();
 	Fraggy.highFiveGuys();
 	Trappy.beRepaired(1);
 	Trappy.takeDamage(10);

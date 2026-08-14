@@ -3,13 +3,8 @@
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
-class FragTrap: public ClapTrap
+class FragTrap: virtual public ClapTrap
 {
-	private:
-		std::string name;
-		int hp;
-		int sp;
-		int dmg;
 	public:
 		FragTrap();
 		FragTrap(std::string name);

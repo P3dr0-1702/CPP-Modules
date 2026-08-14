@@ -3,13 +3,8 @@
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
-	private:
-		int hp;
-		int sp;
-		int dmg;
-		std::string name;
 	public:
 		ScavTrap();
 		ScavTrap(std::string name);
