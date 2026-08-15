@@ -46,5 +46,10 @@ FragTrap &FragTrap::operator=(const FragTrap &src)
 
 void FragTrap::highFiveGuys(void)
 {
+	if(this->hp <= 0)
+	{
+		std::cout << "FragTrap: " << this->name << " is dead, dead men ask for no Highfives" << std::endl;
+		return;
+	}
 	std::cout << "FragTrap: " << this->name << " is requesting a high five, may you give it to him?" << std::endl;
 }

@@ -64,5 +64,10 @@ void ScavTrap::attack(const std::string &target)
 
 void ScavTrap::guardGate(void)
 {
+	if(this->hp <= 0)
+	{
+		std::cout << "ScavTrap: " << this->name << " is dead, he ain't gatekeeping no time soon or late" << std::endl;
+		return;
+	}
 	std::cout << "ScavTrap: " << this->name << " is gatekeeping, he refuses to tell you where to start reading The Flash comics" << std::endl;
 }

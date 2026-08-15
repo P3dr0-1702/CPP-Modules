@@ -5,11 +5,6 @@
 
 class FragTrap: public ClapTrap
 {
-	private:
-		std::string name;
-		int hp;
-		int sp;
-		int dmg;
 	public:
 		FragTrap();
 		FragTrap(std::string name);
