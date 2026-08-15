@@ -21,9 +21,7 @@ ClapTrap::ClapTrap(std::string name)
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
-	this->hp = 10;
-	this->sp = 10;
-	this->dmg = 0;
+
 	std::cout << "ClapTrap: " << copy.name << " smurfed his account: " << this->name << " Jr. is a smurf" << std::endl;
 }
 

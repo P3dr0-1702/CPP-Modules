@@ -21,9 +21,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
 	*this = copy;
-	this->hp = 100;
-	this->sp = 103;
-	this->dmg = 30;
 	std::cout << "FragTrap: " << copy.name << " smurfed his account: " << this->name << " Jr. is a smurf" << std::endl;
 }
 

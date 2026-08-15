@@ -22,9 +22,6 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &copy) :ClapTrap(copy)
 {
 	*this = copy;
-	this->hp = 100;
-	this->sp = 50;
-	this->dmg = 20;
 	std::cout << "ScavTrap: " << copy.name << " smurfed his account: " << this->name << " Jr. is a smurf" << std::endl;
 }
 
