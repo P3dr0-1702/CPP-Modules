@@ -9,6 +9,8 @@ class WrongCat: public WrongAnimal
 		WrongCat(const WrongCat &copy);
 		WrongCat &operator=(const WrongCat &src);
 		~WrongCat();
+		void makeSound(void) const;
+
 };
 
 #endif // ! WRONGCAT_HPP

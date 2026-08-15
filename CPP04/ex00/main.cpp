@@ -13,7 +13,7 @@ int main()
 	j->makeSound();
 	
 	const WrongAnimal *bixo = new WrongAnimal();
-	const WrongCat *gyato = new WrongCat();
+	const WrongAnimal *gyato = new WrongCat();
 	std::cout << bixo->getType() << std::endl;
 	std::cout << gyato->getType() << std::endl;
 	bixo->makeSound();

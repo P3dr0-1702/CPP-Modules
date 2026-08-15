@@ -23,7 +23,7 @@ WrongCat &WrongCat::operator=(const WrongCat &src)
 	return *this;
 }
 
-// void WrongCat::makeSound(void) const
-// {
-// 	std::cout << "Kat: Miau" << std::endl;
-// }
+void WrongCat::makeSound(void) const
+{
+	std::cout << "Kat: Miau" << std::endl;
+}
