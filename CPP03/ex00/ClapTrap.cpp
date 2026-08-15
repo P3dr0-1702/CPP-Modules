@@ -54,7 +54,7 @@ void ClapTrap::attack(const std::string &target)
 	}
 	if(this->sp <= 0)
 	{
-		std::cout << "ClapTrap: " << this->name << " is too tired, give him a \"Mini\" and a \"Tremoço\" adn he'll be good as new" << std::endl;
+		std::cout << "ClapTrap: " << this->name << " is too tired, give him a \"Mini\" and a \"Tremoço\" and he'll be good as new" << std::endl;
 		return;
 	}
 	std::cout << "ClapTrap: " << this->name << " attacked " << target << " with it's Terra Blade, causing " << this->dmg << " points of damage" << std::endl;

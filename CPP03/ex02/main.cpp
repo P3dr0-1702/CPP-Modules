@@ -3,33 +3,31 @@
 
 int main()
 {
+
+	std::cout << "\n========== CONSTRUCTORS ==========\n";
 	ClapTrap Clappy;
-	ClapTrap Trappy("Trappy");
-	ClapTrap Clappy_Trappy(Clappy);
+	FragTrap Trappy("Trappy");
+	FragTrap Clappy_Trappy(Trappy);
 	ScavTrap Scavvy("Scavvy");
 	FragTrap Fraggy("Fraggy");
+	int i = 0;
+
+	std::cout << "\n========== BASIC FUNCTIONS ==========\n";
 	Clappy.attack("Trappy");
-	Trappy.takeDamage(10);
+	Trappy.takeDamage(200);
 	Clappy_Trappy.beRepaired(10);
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Clappy.attack("Trappy");
-	Scavvy.attack("Trappy");
 	Scavvy.guardGate();
-	Scavvy.beRepaired(10);
-	Scavvy.takeDamage(200);
-	Scavvy.attack("Trappy");
 	Fraggy.attack("Trappy");
-	Fraggy.takeDamage(200);
-	Fraggy.attack("Clappy");
+	Fraggy.beRepaired(10);
+	Fraggy.takeDamage(10);
 	Fraggy.highFiveGuys();
+	std::cout << "\n========== NO ENERGY TEST==========\n";
+	while(i++ <= 100)
+		Fraggy.attack("Trappy");
+	std::cout << "\n========== FUCNTION AFTER DEAD TEST==========\n";
+	Trappy.attack("Clappy");
 	Trappy.beRepaired(1);
 	Trappy.takeDamage(10);
+	Trappy.highFiveGuys();
+	std::cout << "\n========== DESTRUCTORS ==========\n";
 }

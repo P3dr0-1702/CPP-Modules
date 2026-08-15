@@ -55,7 +55,7 @@ void ScavTrap::attack(const std::string &target)
 	}
 	if(this->sp <= 0)
 	{
-		std::cout << "ScavTrap: " << this->name << " is too tired, give him a \"Mini\" and a \"Tremoço\" adn he'll be good as new" << std::endl;
+		std::cout << "ScavTrap: " << this->name << " is too tired, give him a \"Mini\" and a \"Tremoço\" and he'll be good as new" << std::endl;
 		return;
 	}
 	std::cout << "ScavTrap: " << this->name << " attacked " << target << " with it's Terra Blade, causing " << this->dmg << " points of damage" << std::endl;
