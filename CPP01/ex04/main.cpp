@@ -1,46 +1,53 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
-std::string sed_replace(std::string source, std::string find, std::string replace)
+std::string sed_replace(std::string source, std::string find,
+	std::string replace)
 {
+	size_t	found;
+	size_t	i;
+
 	std::string result;
-	size_t found;
-	size_t i;
+	if(find.empty())
+		return source;
+	if(source.empty())
+		return "";
 	i = 0;
 	found = 0;
 	std::cout << source << std::endl;
-	while((found = source.find(find, i)) != std::string::npos)
+	while ((found = source.find(find, i)) != std::string::npos)
 	{
 		result.append(source, i, found - i);
 		result += replace;
 		i = found + find.size();
 	}
 	result.append(source, i, source.size() - i);
-	return result;
+	return (result);
 }
 
-void sed_is_for_losers(std::string filename, std::string find, std::string replace)
+void	sed_is_for_losers(std::string filename, std::string find,
+		std::string replace)
 {
 	std::fstream file;
 	std::fstream outfile;
 	file.open(filename.c_str(), std::ios::in);
-	if(!file.is_open())
+	if (!file.is_open())
 	{
 		std::cout << "Can't read infile, figure it out" << std::endl;
-		return;
+		return ;
 	}
 	std::string temp;
 	std::string source;
-	while(std::getline(file, temp))
+	while (std::getline(file, temp))
 	{
 		source.append(temp);
 		source += "\n";
 	}
 	outfile.open(filename.append(".replace").c_str(), std::ios::out);
-	if(!outfile.is_open())
+	if (!outfile.is_open())
 	{
 		std::cout << "Can't write outfile, figure it out" << std::endl;
-		return;
+		return ;
 	}
 	outfile << sed_replace(source, find, replace);
 }
