@@ -1,25 +1,48 @@
 NAME = bsp
-CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror --std=c++98
+
+CXX = clang++
+
 SRCS = Fixed.cpp main.cpp Point.cpp bsp.cpp
-OBJS = $(SRCS:.cpp=.o)
+
+CXXFLAGS = -Wall -Wextra -Werror -MMD -MP
+CXXAFLAGS = -std=c++98
+
+DEBUG_FLAGS = -g
+
+OBJ_DIR = .objs
+DBG_DIR = .objs-debug
+
+
+OBJS = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
+DBG_OBJS = $(SRCS:%.cpp=$(DBG_DIR)/%.o)
+
+DEPS = $(OBJS:.o=.d)
+DBG_DEPS = $(DBG_OBJS:.o=.d)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(CXXAFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) $(CXXAFLAGS) -c $< -o $@
+
+d: $(DBG_OBJS)
+	$(CXX) $(CXXFLAGS) $(CXXAFLAGS) $(DEBUG_FLAGS) $(DBG_OBJS) -o $(NAME)
+
+$(DBG_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) $(CXXAFLAGS) $(DEBUG_FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -rf $(OBJ_DIR) $(DBG_DIR)
 
 fclean: clean
 	rm -f $(NAME)
 
-re : fclean all
+re: fclean all
 
-e: all clean
+-include $(DEPS) $(DBG_DEPS)
 
-.PHONY: all clean e fclean re
+.PHONY: all d clean fclean re
