@@ -1,11 +1,12 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap():ClapTrap("Nameless Hobo_clap_name"), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap():ClapTrap(), ScavTrap(), FragTrap()
 {
 	this->name = "Nameless Hobo";
 	this->hp = 100;
 	this->sp = 50;
 	this->dmg = 30;
+	this->ClapTrap::name = "Nameless Hobo_clap_name";
 	std::cout << "DiamondTrap: " << this->name << " joined" << std::endl;
 }
 
@@ -15,6 +16,7 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavT
 	this->hp = 100;
 	this->sp = 50;
 	this->dmg = 30;
+	this->ClapTrap::name = name + "_clap_name";
 	std::cout << "DiamondTrap: " << this->name << " joined" << std::endl;
 }
 
@@ -37,6 +39,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &src)
 		this->hp = src.hp;
 		this->sp = src.sp;
 		this->name = src.name;
+		this->ClapTrap::name = src.ClapTrap::name;
 	}
 	return (*this);
 }
@@ -48,5 +51,5 @@ void DiamondTrap::WhoAmI(void)
 		std::cout << "DiamondTrap: " << this->name << " ain't nobody anymore, he's dead" << std::endl;
 		return;
 	}
-	std::cout << "DiamondTrap: " << this->name << "'s name is " << this->name << " (duh). His ClapTrap name is " << ClapTrap::name << std::endl;
+	std::cout << "DiamondTrap: " << this->name << "'s name is " << this->name << " (duh). His ClapTrap name is " << this->ClapTrap::name << std::endl;
 }
