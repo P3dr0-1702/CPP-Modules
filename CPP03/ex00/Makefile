@@ -1,6 +1,6 @@
 NAME = ClapTrap
 
-CXX = clang++
+CXX = c++
 
 SRCS = ClapTrap.cpp main.cpp
 

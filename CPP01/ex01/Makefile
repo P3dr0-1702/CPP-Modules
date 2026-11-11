@@ -1,6 +1,6 @@
 NAME = Brain
 
-CXX = clang++
+CXX = c++
 
 SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp zombieHorde.cpp
 

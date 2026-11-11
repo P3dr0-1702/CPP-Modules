@@ -1,0 +1,20 @@
+[
+  {
+    "file": "main.cpp",
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MP",
+      "-std=c++98",
+      "-c",
+      "main.cpp",
+      "-o",
+      ".objs/main.o"
+    ],
+    "directory": "/home/pedro/Code/42/CPP-Modules/CPP05/ex03",
+    "output": ".objs/main.o"
+  }
+]

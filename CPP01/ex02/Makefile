@@ -1,6 +1,6 @@
 NAME = DesmitifyRefs
 
-CXX = clang++
+CXX = c++
 
 SRCS = main.cpp
 

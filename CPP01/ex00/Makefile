@@ -1,6 +1,6 @@
 NAME = Zombie
 
-CXX = clang++
+CXX = c++
 
 SRCS = newZombie.cpp main.cpp randomChump.cpp Zombie.cpp
 

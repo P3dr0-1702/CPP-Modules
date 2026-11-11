@@ -1,6 +1,6 @@
 NAME = Account
 
-CXX = clang++
+CXX = c++
 
 SRCS = Account.cpp tests.cpp
 

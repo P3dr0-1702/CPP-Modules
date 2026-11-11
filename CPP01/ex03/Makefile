@@ -1,6 +1,6 @@
 NAME = UnnecessaryViolence
 
-CXX = clang++
+CXX = c++
 
 SRCS = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 

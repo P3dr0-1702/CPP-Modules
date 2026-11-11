@@ -1,6 +1,6 @@
 NAME = Fixed
 
-CXX = clang++
+CXX = c++
 
 SRCS = Fixed.cpp main.cpp
 

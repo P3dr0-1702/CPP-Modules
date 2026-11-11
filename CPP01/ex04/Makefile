@@ -1,6 +1,6 @@
 NAME = sedIsForLosers
 
-CXX = clang++
+CXX = c++
 
 SRCS = main.cpp
 

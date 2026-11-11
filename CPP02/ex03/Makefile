@@ -1,6 +1,6 @@
 NAME = bsp
 
-CXX = clang++
+CXX = c++
 
 SRCS = Fixed.cpp main.cpp Point.cpp bsp.cpp
 

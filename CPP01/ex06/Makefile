@@ -1,6 +1,6 @@
 NAME = harlFilter
 
-CXX = clang++
+CXX = c++
 
 SRCS = Harl.cpp main.cpp
 

@@ -1,6 +1,6 @@
 NAME = megaphone
 
-CXX = clang++
+CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -MMD -MP
 CXXAFLAGS = -std=c++98

@@ -1,6 +1,6 @@
 NAME = Harl
 
-CXX = clang++
+CXX = c++
 
 SRCS = Harl.cpp main.cpp
 

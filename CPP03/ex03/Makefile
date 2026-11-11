@@ -1,6 +1,6 @@
 NAME = DiamondTrap
 
-CXX = clang++
+CXX = c++
 
 SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
